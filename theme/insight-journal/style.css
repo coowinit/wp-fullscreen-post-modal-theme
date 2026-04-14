@@ -1,0 +1,13 @@
+/*
+Theme Name: Insight Journal
+Theme URI: https://example.com/insight-journal
+Author: OpenAI
+Author URI: https://openai.com
+Description: 卡片列表 + 路由化详情弹层的 WordPress 主题示例。
+Version: 1.5.0
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 7.4
+Text Domain: insight-journal
+*/
+@import url('assets/css/theme.css');

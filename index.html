@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insight Journal - HTML Preview</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-static-preview="true">
+  <header class="site-header">
+    <div class="site-shell site-header__row">
+      <div class="brand">
+        <h1>Insight Journal</h1>
+        <p>GitHub 可预览的静态 HTML 页面。点击卡片后打开全屏详情层，并修改 URL 查询参数模拟“路由化弹层”。</p>
+      </div>
+      <div class="header-actions">
+        <input class="search" type="search" placeholder="搜索文章标题或标签" aria-label="搜索文章" />
+        <a class="filter-btn btn-link" href="README.md">查看 README</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-shell">
+    <section class="hero">
+      <article class="hero-card">
+        <div>
+          <div class="hero-card__meta">
+            <span class="chip">精选文章</span>
+            <span>2026-04-14</span>
+            <span>设计系统</span>
+          </div>
+          <h2>如何把博客详情页做成可分享的全屏弹层</h2>
+          <p>这种模式同时兼顾浏览体验、URL 可复制、浏览器前进后退，以及 WordPress 后续模板拆分。列表页点开像弹窗，直接访问链接又能自然显示成独立详情页。</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary open-post" type="button" data-slug="route-modal-pattern">阅读示例</button>
+            <a class="btn btn-secondary btn-link" href="README.md">阅读实现说明</a>
+          </div>
+        </div>
+        <div class="hero-card__image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="桌面上的设计与开发工作场景" />
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h3>最新文章</h3>
+          <p>卡片列表适合博客首页、分类页、归档页，也方便后续替换为 WordPress Loop。</p>
+        </div>
+      </div>
+      <div class="post-grid" id="postGrid"></div>
+    </section>
+  </main>
+
+  <div class="modal" id="postModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="关闭详情">×</button>
+      <div class="detail-wrap" id="detailWrap"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
